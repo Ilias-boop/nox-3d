@@ -1,0 +1,106 @@
+@media(min-width:721px){
+    #nav-menu{
+        transform: translateY(0) !important;
+    }
+}
+/* ================================================================================
+========================1080px============================
+================================================================================ */
+@media(max-width:1080px){
+    .container{
+        width: 90%;
+    }
+    .about-paragraph{
+        width: 90%;
+    }
+    
+    .test{
+        width: 48%;
+        height: 180px;
+    }
+    #Owner .container{
+        width: 80%;
+    }
+    #Owner .left img{
+        height: 180px;
+    }
+    #Owner .right{
+        width: 40%;
+    }
+}
+
+/* ================================================================================
+========================720px============================
+================================================================================ */
+@media(max-width:720px){
+    #burger{
+        display: flex;
+    }
+    #nav-menu{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 70vh;
+        width: 100%;
+        background-color: #101E2D;
+        flex-direction: column;
+        justify-content: space-evenly;
+        transform: translateY(-100%);
+        transition: transform 0.25s;
+    }
+    #H-content{
+        flex-direction: column;
+        gap: 1em;
+    }
+    #H-content .left{
+        width: 90%;
+    }
+    #H-content .left h1{font-size: 3em;}
+    #H-content .left h3{font-size: 1.4;}
+    .about-paragraph{
+        width: 80%;
+        font-size: 16px;
+    }
+    .service h3{
+        font-size: 20px;
+    }
+    .service p{
+        font-size: 16px;
+    }
+    #Test .container{
+        flex-direction: column;
+        gap: 1em;
+    }
+    
+    .test{
+        width: 90%;
+        height: 200px;
+        border-radius: 5px;
+    }
+    footer nav{
+        flex-direction: column;
+    }
+    #Owner .container{
+        flex-direction: column;
+        height: auto;
+        padding: 1em 0;
+        gap: 0.5em;
+        width: 90%;
+    }
+    #Owner .container .right{
+        width: 80%;
+        text-align: center;
+    }
+    form.right{
+        width: 86%;
+    }
+    .f-row{
+        flex-direction: column;
+    }
+}
+@media(max-width:480px){
+    #Hero{
+        height: auto;
+        padding: 1em 0;
+    }
+}

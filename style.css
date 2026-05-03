@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&display=swap');/* ====================================================================
+========================PreLoader========================
+==================================================================== */
+#preLoader{
+    height: 100vh;
+    width: 100vw;
+    background-color: #101E2D;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#preLoader img{
+    width: 80px;
+    animation: rotate 1s infinite;
+    transition: transform 1s; 
+    filter: invert();
+}
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+/* ====================================================================
+========================Global========================
+==================================================================== */
+*,body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+.container{
+    height: auto;
+    width: 80%;
+    margin: auto;
+}
+.space{
+    height: 3em;
+}
+.heading{
+    font-size: 36px;
+    font-weight: 800;
+    text-align: center;
+}
+.s-space{
+    height: 1.5em;
+}
+/* ====================================================================
+========================Header & Navbar========================
+==================================================================== */
+header{
+    width: 100%;
+    height: 3.5em;
+    background-color: #101E2D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+#Navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#brand img{
+    height: 3.5em;
+}
+#brand h2{
+    font-size: 28px;
+    color: white;
+    font-weight: 700;
+}
+
+#brand{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+#brand:hover{
+    transform: scale(1.1);
+}
+#nav-menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    list-style: none;
+}
+#nav-menu li a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    padding: 2px;
+}
+#nav-menu li a::after{
+    content: "";
+    height: 0;
+    width: 0;
+    border-bottom: 3px solid white;
+    padding: 22px 0;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.25s ease-out;
+}
+#nav-menu li a:hover::after{
+    width: 100%;
+}
+#burger{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    flex-direction: column;
+    z-index: 99;
+}
+#burger .line{
+    background-color: white;
+    height: 5px;
+    width: 2.5em;
+    transition: transform 0.25s;
+}
+/* ====================================================================
+========================Hero & Form========================
+==================================================================== */
+#Hero{
+    height: 100vh;
+    width: 100%;
+    background: rgba(0,0,0,0.65) url('./media/hero.jpg') center center /cover;
+    background-blend-mode: darken;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#H-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+}
+#H-content .left{
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+    gap: 5px;
+    width: 42%;
+    padding: .5em;
+    color: white;
+}
+#H-content .left h1{
+    font-size: 3.5em;
+}
+#H-content .left h3{
+    font-size: 1.6em;
+}
+#H-content .left p{
+    font-size: 1.1em;
+    text-align: justify;
+}
+#H-content .left a{
+    font-size: 20px;
+    color: transparent;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 0.4em 0.5em;
+    text-align: center;
+    border-radius: 6px;
+    display: inline-block;
+    width: 160px;
+    transition: all 0.2s;
+    margin-top: 4px;
+
+}
+#H-content .left a:hover{
+    background-color: white;
+    color: #101E2D;
+}
+form.right{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 17px;
+    padding: 1em ;
+    border-radius: 3px;
+    color: #101E2D;
+}
+form.right label{
+    font-weight: 500;
+}
+form.right input{
+    font-size: 16px;
+    padding: 5px 8px;
+    border: none;
+    outline: none;
+    background-color: rgb(218, 215, 215);
+    border-radius: 2px;
+    width: 100%;
+}
+form.right .message{
+    width: 100%;
+}
+.f-row{
+    display: flex;
+    gap:10px;
+}
+form.right button{
+    font-size: 18px;
+    display: block;
+    width: 80px;
+    padding: 4px 6px;
+    border: 1px solid #101E2D;
+    border-radius: 4px;
+    transition: all 0.25s;
+}
+form.right button:hover{
+    color: white;
+    background-color: #101E2D;
+}
+.input{
+    display: flex;
+    align-items: flex-start;
+    justify-content: left;
+    flex-direction: column;
+    gap: 5px;
+}
+/* ====================================================================
+========================About Us Section========================
+==================================================================== */
+#About{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-paragraph{
+    font-size: 18px;
+    font-weight: 500;
+    text-align: justify;
+    margin: 0 auto;
+    width: 80%;
+}
+/* ====================================================================
+========================Our Services Section========================
+==================================================================== */
+.services{
+    display: flex;
+    gap: 1.8em 1.4em;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: left;
+}
+.service{
+    display: flex;
+    width: 260px;
+    flex-direction: column;
+    border: 1px solid rgb(90, 90, 90,0.3);
+    border-radius: 8px;
+    overflow: hidden;
+    height: 400px;
+    box-shadow: rgba(100,100,111,0.4) 0px 7px 29px 0px;
+    transition: transform 0.2s;
+    cursor: pointer;
+    margin: auto;
+}
+
+.service img{
+    width: 100%;
+    height: 180px;
+    transition: opacity 0.25s;
+    opacity: 0.8;
+}
+.service h3{
+    font-size: 24px;
+    font-weight: 700;
+    padding: 0  10px;
+}
+.service p{
+    font-size: 18px;
+    text-align: justify;
+    padding: 0  10px;
+}
+.service:hover{
+    transform: scale(1.05);
+}
+.service:hover img{
+    opacity: 1.0;      
+}
+/* ====================================================================
+========================Testimonials Section========================
+==================================================================== */
+#Test .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.test{
+    background-color: #101E2D;
+    color: white;
+    width: 40%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    animation: shake 0.35s infinite;
+}
+@keyframes shake {
+    0%{
+        margin-right: 3px;
+    }
+    50%{
+        margin-right: -3px;
+    }
+    100%{
+        margin-right: 3px;
+    }
+}
+.test .content{
+    text-align: center;
+    width: 80%;
+}
+/* ====================================================================
+========================Owner's Message Section========================
+==================================================================== */
+#Owner .container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #101E2D;
+    color: white;
+    height: 20em;
+    width: 60%;
+    border-radius: 5px;
+}
+#Owner .left{
+    display: flex;   
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.left{
+    /* overflow: hidden; */
+    width: auto;
+}
+#Owner .left img{
+    height: 200px;
+    border-radius: 4px;
+    border: 2px solid white;
+    transition: transform 0.35s;
+}
+.image{
+    overflow: hidden;
+}
+#Owner .left img:hover{
+    transform: scale(1.1);
+}
+#Owner .right{
+    width: 30%;
+}
+/* #Owner */
+/* ====================================================================
+========================Footer Section========================
+==================================================================== */
+footer{
+    padding: 2em 0;
+    width: 100%;
+    background-color: #101E2D;
+    color: white;
+    text-align: center;
+}
+footer nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+footer nav ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+footer nav ul li a{
+    color: white;
+}
+footer nav ul li a:hover{
+    color: rgb(199, 199, 199);
+}
+
+
+
